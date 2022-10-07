@@ -23,9 +23,9 @@ export const Footer = ({ onEventGaClickIcon, onEventGaClickLink }) => (
           </div>
           <div className="item-text">
             <span>CONTÁCTANOS</span>
-              <h2 className="content-contact">
-                ¡CONTÁCTENOS Y OBTEN NUESTROS SERVICIOS EN LOS MEJORES PRECIOS!
-              </h2>
+            <h2 className="content-contact">
+              ¡CONTÁCTENOS Y OBTEN NUESTROS SERVICIOS EN LOS MEJORES PRECIOS!
+            </h2>
             <h2 className="content-somos">¡SOMOS SERVITEC!</h2>
           </div>
         </div>
@@ -168,7 +168,7 @@ export const Footer = ({ onEventGaClickIcon, onEventGaClickLink }) => (
         </div>
         <div className="bottom-footer">
           <div>
-            © Copyright 2022 - {capitalize(contactData.title)} / Diseñado con{" "}
+            © Copyright 2022 - {capitalize(contactData.name)} / Diseñado con{" "}
             <FontAwesomeIcon icon={faHeart} color="red" /> por{" "}
             <a
               href={contactData.poweredBy.webUrl}
@@ -228,7 +228,7 @@ const Container = styled.footer`
       //    font-size: 0.8rem;
       //  }
       //}
-      span{
+      span {
         color: #363636;
         font-size: 147px;
         left: 0;
@@ -239,9 +239,9 @@ const Container = styled.footer`
         //transition: all 0.4s ease 0s;
         width: 100%;
       }
-      .content-contact{
+      .content-contact {
         margin-top: -1.5rem;
-        font-family: 'Intro Demo', sans-serif;
+        font-family: "Intro Demo", sans-serif;
         font-size: 26px;
         color: #fff;
         letter-spacing: 0.3px;
@@ -250,9 +250,9 @@ const Container = styled.footer`
         text-align: center;
         width: 100%;
       }
-      .content-somos{
+      .content-somos {
         margin-top: -0.5rem;
-        font-family: 'Intro Demo', sans-serif;
+        font-family: "Intro Demo", sans-serif;
         font-size: 26px;
         color: #fff;
         letter-spacing: 0.3px;
@@ -346,7 +346,7 @@ const Container = styled.footer`
       font-size: 0.8rem;
       a {
         font-weight: 500;
-        color: #FFF100;
+        color: #fff100;
       }
     }
   }
