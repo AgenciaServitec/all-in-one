@@ -224,7 +224,6 @@ export const FormContact = () => {
         </Col>
         <Col xs={24} sm={24} md={24} lg={54}>
           <Button
-            type="secondary"
             width="100%"
             margin=""
             block
