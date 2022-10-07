@@ -1,16 +1,12 @@
 import React, { useState } from "react";
-import styled, { css } from "styled-components";
-import ModalAntd from "antd/lib/modal/Modal";
-import { mediaQuery } from "../../../styles/constants/mediaQuery";
 import Row from "antd/lib/row";
 import Col from "antd/lib/col";
 import { Controller, useForm } from "react-hook-form";
 import { yupResolver } from "@hookform/resolvers/yup";
 import * as yup from "yup";
-import { useFormUtils } from "../../../hooks";
+import { useDevice, useFormUtils } from "../../../hooks";
 import { Input } from "./Input";
 import { Form } from "./Form";
-import { defaultTo } from "lodash";
 import { phoneCodes } from "../../../data-list";
 import { Select } from "./Select";
 import { InputNumber } from "./InputNumber";
@@ -19,7 +15,6 @@ import { notification } from "./notification";
 import { currentConfig } from "../../../firebase";
 import { useNavigate } from "react-router";
 import { Button } from "../ui";
-import { useDevice } from "../../../hooks";
 
 export const FormContact = () => {
   const { isMobile } = useDevice();
@@ -237,55 +232,3 @@ export const FormContact = () => {
     </Form>
   );
 };
-
-const ModalBackground = css`
-  background-color: ${({ backgroundModal, theme }) =>
-    defaultTo(backgroundModal, theme.colors.tertiary)};
-  color: ${({ theme }) => theme.colors.font2};
-`;
-
-const ModalComponent = styled(ModalAntd)`
-  position: relative;
-  min-width: 100vw;
-  min-height: 100vh;
-  width: 100%;
-  height: auto;
-  box-sizing: border-box;
-  margin: 0 auto;
-  padding: 0;
-  top: 0;
-  z-index: 9999999 !important;
-
-  ${mediaQuery.minTablet} {
-    min-width: inherit;
-    min-height: inherit;
-    width: inherit;
-    height: auto;
-    top: 2vh;
-  }
-  .ant-modal-content {
-    position: absolute;
-    inset: 0;
-    ${ModalBackground};
-
-    .ant-modal-header {
-      ${ModalBackground};
-      border-bottom: 1px solid #53575a;
-
-      .ant-modal-title {
-        color: ${({ theme }) => theme.colors.font1};
-        h2 {
-          margin: 0;
-        }
-      }
-    }
-
-    .ant-modal-close {
-      color: ${({ theme }) => theme.colors.font1};
-    }
-
-    .ant-modal-body {
-      ${ModalBackground};
-    }
-  }
-`;
