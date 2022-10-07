@@ -1,8 +1,8 @@
 import React from "react";
 import styled, { css } from "styled-components";
 import { capitalize, get, isEmpty, startCase, toString } from "lodash";
-import { classNames } from "../../../styles";
-import { keyframes } from "../../../styles/constants/keyframes";
+import { classNames } from "../../../../styles";
+import { keyframes } from "../../../../styles/constants/keyframes";
 import Typography from "antd/lib/typography";
 import { lighten, tint } from "polished";
 

@@ -1,16 +1,9 @@
 import React from "react";
 import styled from "styled-components";
-import { mediaQuery } from "../../styles/constants/mediaQuery";
+import { mediaQuery } from "../../../styles/constants/mediaQuery";
 import { Button } from "../ui";
 
-export const ItemCarousel = ({
-  bgColor,
-  image,
-  description,
-  title,
-  onClickVisibleFormContact,
-  onEventGaClickButton,
-}) => {
+export const ItemCarousel = ({ bgColor, image, description, title }) => {
   return (
     <Container bgColor={bgColor}>
       <div className="content-item">
@@ -19,16 +12,7 @@ export const ItemCarousel = ({
             <h2>{title}</h2>
             <p>{description}</p>
           </div>
-          <div
-            className="btn-item"
-            onClick={() => {
-              onClickVisibleFormContact(true);
-              onEventGaClickButton(
-                "click-boton-cotizar",
-                "Click boton cotizar"
-              );
-            }}
-          >
+          <div className="btn-item">
             <Button text="Cotiza ahora" />
           </div>
         </div>
@@ -90,7 +74,6 @@ const Container = styled.div`
         ${mediaQuery.minTablet} {
           font-size: 3.6rem;
           line-height: 3rem;
-          
         }
       }
 

@@ -1,40 +1,27 @@
-import React, {useState} from "react";
+import React, { useState } from "react";
 import styled from "styled-components";
-import {LogoServitec} from "../../images";
-import {useAnalyticsEventTracker, useDevice} from "../../hooks";
-import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
-import {faBars} from "@fortawesome/free-solid-svg-icons";
-import {Drawer} from "./Drawer";
-import {Link} from "react-router-dom";
-import {Footer} from "./Footer";
-import {ButtonsFloating, WrapperComponent} from "../ui";
-import {useNavigate} from "react-router";
+import { LogoServitec } from "../../../images";
+import { useDevice } from "../../../hooks";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faBars } from "@fortawesome/free-solid-svg-icons";
+import { Drawer } from "./Drawer";
+import { Link } from "react-router-dom";
+import { Footer } from "./Footer";
+import { ButtonsFloating, WrapperComponent } from "../ui";
+import { useNavigate } from "react-router";
+import { mediaQuery } from "../../../styles/constants/mediaQuery";
 
-export const BaseLayout = ({ children, onClickVisibleFormContact }) => {
+export const BaseLayout = ({ children }) => {
   const { isMobile } = useDevice();
   const navigate = useNavigate();
 
   const [visibleDrawer, setVisibleDrawer] = useState(false);
-
-  const gaEventTrackerButtons = useAnalyticsEventTracker("Buttons");
-  const gaEventTrackerIcons = useAnalyticsEventTracker("Icons");
-  const gaEventTrackerLinks = useAnalyticsEventTracker("Links");
-
-  const eventGaClickButton = (action, label) =>
-    gaEventTrackerButtons(action, label);
-
-  const eventGaClickIcon = (action, label) =>
-    gaEventTrackerIcons(action, label);
-
-  const eventGaClickLink = (action, label) =>
-    gaEventTrackerLinks(action, label);
 
   return (
     <Container>
       <Drawer
         visibleDrawer={visibleDrawer}
         onSetVisibleDrawer={setVisibleDrawer}
-        onClickVisibleFormContact={onClickVisibleFormContact}
       />
       <header className="header">
         <WrapperComponent>
@@ -45,13 +32,7 @@ export const BaseLayout = ({ children, onClickVisibleFormContact }) => {
                   <img
                     src={LogoServitec}
                     alt="Logo Servitec Facil Factura"
-                    onClick={() => {
-                      navigate("/");
-                      eventGaClickLink(
-                        "click-link-logo-publicidad-google",
-                        "Click link logo publicidad google"
-                      );
-                    }}
+                    onClick={() => navigate("/")}
                   />
                 </div>
                 <div
@@ -65,22 +46,12 @@ export const BaseLayout = ({ children, onClickVisibleFormContact }) => {
               <div className="menu-list">
                 <div className="logo-img">
                   <Link to="/">
-                    <img
-                      src={LogoServitec}
-                      alt="Logo Servitec Facil Factura"
-                      onClick={() =>
-                        eventGaClickLink(
-                          "click-link-logo-publicidad-google",
-                          "Click link logo publicidad google"
-                        )
-                      }
-                    />
+                    <img src={LogoServitec} alt="Logo Servitec Facil Factura" />
                   </Link>
                 </div>
                 <nav className="list">
                   <ul>
-                    {/*<a onClick={() => navigate("/")}>*/}
-                      <a href="#inicio">
+                    <a href="#inicio">
                       <li>INICIO</li>
                     </a>
                     <a href="#about-us">
@@ -89,8 +60,7 @@ export const BaseLayout = ({ children, onClickVisibleFormContact }) => {
                     <a href="#services">
                       <li>SERVICIOS</li>
                     </a>
-                    {/*<a onClick={() => onClickVisibleFormContact()}>*/}
-                      <a href="#footer">
+                    <a href="#footer">
                       <li>CONTÁCTO</li>
                     </a>
                   </ul>
@@ -101,11 +71,8 @@ export const BaseLayout = ({ children, onClickVisibleFormContact }) => {
         </WrapperComponent>
       </header>
       <main className="body">{children}</main>
-      <Footer
-        onEventGaClickIcon={eventGaClickIcon}
-        onEventGaClickLink={eventGaClickLink}
-      />
-      <ButtonsFloating onEventGaClickButton={eventGaClickButton} />
+      <Footer />
+      <ButtonsFloating />
     </Container>
   );
 };
@@ -117,19 +84,70 @@ const Container = styled.div`
   position: relative;
   padding-top: 5rem;
 
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    color: ${({ theme }) => theme.colors.font2};
+    font-family: "Intro Demo", sans-serif;
+    line-height: 5.5rem;
+  }
+
+  h1 {
+    font-size: 2.7rem;
+    font-weight: bold;
+    color: ${({ theme }) => theme.colors.font1};
+    ${mediaQuery.minTablet} {
+      font-size: 6rem;
+    }
+  }
+
+  h2 {
+    font-size: 2.1rem;
+    font-weight: bold;
+    color: ${({ theme }) => theme.colors.font1};
+
+    ${mediaQuery.minTablet} {
+      font-size: 5rem;
+    }
+  }
+
+  h3 {
+    font-size: 3rem;
+    font-weight: bold;
+  }
+
+  h4 {
+    font-size: 1.2rem;
+    font-weight: bold;
+  }
+
+  h5 {
+    font-size: 1.1rem;
+    font-weight: bold;
+  }
+
+  p,
+  ul,
+  li,
+  span {
+    color: ${({ theme }) => theme.colors.font3};
+  }
+
   .header {
     position: fixed;
     z-index: 100;
     width: 100%;
     //max-width: 1250px;
     height: auto;
-    background: #2a2a2a;
+    background: ${({ theme }) => theme.colors.secondary};
     margin: auto;
-    padding: 1rem ;
-    padding-top: 1.5rem;
+    padding: 1rem;
     display: grid;
     grid-area: auto;
-    box-shadow: 0 6px 8px 0 rgb(12 0 46 / 6%);    
+    box-shadow: 0 6px 8px 0 rgb(12 0 46 / 6%);
     right: 0;
     left: 0;
     top: 0;
@@ -173,7 +191,7 @@ const Container = styled.div`
           }
           li:hover {
             color: black;
-            border-bottom: 2px solid #FFF100;
+            border-bottom: 2px solid #fff100;
             transition: all 0.3s ease-in-out;
           }
         }

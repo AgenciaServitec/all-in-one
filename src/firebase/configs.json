@@ -28,7 +28,7 @@
     }
   },
   "development": {
-    "version": "0.0.2",
+    "version": "0.0.1",
     "firebaseApp": {
       "apiKey": "AIzaSyCmXqrTJjNxX-7gEby6fXH0pTkrQjmeEsc",
       "authDomain": "all-in-one-364723.firebaseapp.com",
@@ -41,7 +41,7 @@
     "buckets": {}
   },
   "production": {
-    "version": "0.0.2",
+    "version": "0.0.1",
     "firebaseApp": {
       "apiKey": "AIzaSyCmXqrTJjNxX-7gEby6fXH0pTkrQjmeEsc",
       "authDomain": "all-in-one-364723.firebaseapp.com",

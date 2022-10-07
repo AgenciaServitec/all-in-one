@@ -7,19 +7,18 @@ import {
   Services4,
   Services5,
   Services6,
-} from "../../images";
-import {mediaQuery} from "../../styles/constants/mediaQuery";
-import {Button} from "../ui";
-import {ItemServices} from "./ItemServices";
+} from "../../../images";
+import { mediaQuery } from "../../../styles/constants/mediaQuery";
+import { Button } from "../ui";
+import { ItemServices } from "./ItemServices";
 
 export const Services = () => {
-
   return (
     <Container id="services">
       <div className="content-items">
         <div className="heading">
-        <span className="title">+ SERVICIOS</span>
-        <h2 className="subtitle">MÁS SERVICIOS</h2>
+          <h2 className="title">+ SERVICIOS</h2>
+          <h5 className="subtitle">MÁS SERVICIOS</h5>
         </div>
         <div className="content-img">
           <ItemServices
@@ -55,16 +54,16 @@ export const Services = () => {
         </div>
         <div className="button">
           <a href="#inicio">
-          <Button
-            text="¡Empezar Ahora!"
-            type="primary"
-            // onClick={() => {
-            //   onEventGaClickButton(
-            //     "click-boton-empezar-ahora",
-            //     "Click boton empezar ahora"
-            //   );
-            // }}
-          />
+            <Button
+              text="¡Empezar Ahora!"
+              type="primary"
+              // onClick={() => {
+              //   onEventGaClickButton(
+              //     "click-boton-empezar-ahora",
+              //     "Click boton empezar ahora"
+              //   );
+              // }}
+            />
           </a>
         </div>
       </div>
@@ -75,7 +74,7 @@ export const Services = () => {
 const Container = styled.div`
   width: 100%;
   height: auto;
-  background: #292929;
+  background: ${({ theme }) => theme.colors.tertiary};
   padding: 1rem;
   ${mediaQuery.minTablet} {
     padding: 1rem 5rem;
@@ -84,33 +83,21 @@ const Container = styled.div`
 
   .content-items {
     padding: 3rem 0;
-    .heading{
-      //float: left;
+    .heading {
       margin-bottom: 60px;
       padding-top: 79px;
       position: relative;
       text-align: center;
       width: 100%;
       .title {
-        color: #363636;
-        font-size: 147px;
         left: 0;
-        line-height: 102px;
-        //position: absolute;
         text-align: center;
-        //top: 0;
-        //transition: all 0.4s ease 0s;
         width: 100%;
       }
-      .subtitle{
-        //float: left;
-        //margin-top: -3rem;
-        font-family: 'Intro Demo', sans-serif;
+      .subtitle {
+        font-family: "Intro Demo", sans-serif;
         font-size: 26px;
-        color: #fff;
         letter-spacing: 0.3px;
-        //margin: 0;
-        //position: relative;
         text-align: center;
         width: 100%;
       }

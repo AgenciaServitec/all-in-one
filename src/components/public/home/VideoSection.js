@@ -1,13 +1,9 @@
 import React from "react";
 import styled from "styled-components";
-import { mediaQuery } from "../../styles/constants/mediaQuery";
+import { mediaQuery } from "../../../styles/constants/mediaQuery";
 import { Button } from "../ui";
 
-export const VideoSection = ({
-  onClickVisibleFormContact,
-  onEventGaClickButton,
-  onEventGaClickVideos,
-}) => (
+export const VideoSection = () => (
   <Container id="video-section">
     <div className="content-video">
       <iframe
@@ -18,12 +14,6 @@ export const VideoSection = ({
         frameBorder="0"
         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
         allowFullScreen
-        onClick={() =>
-          onEventGaClickVideos(
-            "click-video-publicidad-google",
-            "Click video publicidad google"
-          )
-        }
       />
     </div>
     <div className="content-items">
@@ -40,17 +30,7 @@ export const VideoSection = ({
         </p>
       </div>
       <div className="btn-item">
-        <Button
-          text="Contactanos"
-          type="secondary"
-          onClick={() => {
-            onClickVisibleFormContact(true);
-            onEventGaClickButton(
-              "click-boton-contactanos",
-              "Click boton contactanos"
-            );
-          }}
-        />
+        <Button text="Contactanos" type="secondary" />
       </div>
     </div>
   </Container>

@@ -1,8 +1,8 @@
 import React from "react";
 import styled, { css } from "styled-components";
 import { capitalize, isEmpty, startCase, toString, get } from "lodash";
-import { classNames } from "../../../styles";
-import { keyframes } from "../../../styles/constants/keyframes";
+import { classNames } from "../../../../styles";
+import { keyframes } from "../../../../styles/constants/keyframes";
 import Typography from "antd/lib/typography";
 import { lighten, tint } from "polished";
 
@@ -65,6 +65,7 @@ const labelAnimate = css`
   font-weight: 600;
   font-size: 0.7rem;
   background-color: ${({ theme }) => theme.colors.tertiary};
+  color: ${({ theme }) => theme.colors.font3};
 `;
 
 const Container = styled.div`
@@ -80,7 +81,7 @@ const Container = styled.div`
   }) => css`
     position: relative;
     width: inherit;
-    background: ${bgColor ? bgColor : theme.colors.tertiary};
+    background: ${bgColor ? bgColor : "white"};
     border: 1px solid ${
       error ? theme.colors.error : theme.colors.gray
     } !important;
@@ -105,7 +106,7 @@ const Container = styled.div`
           ? theme.colors.error
           : disabled
           ? theme.color.body
-          : lighten(0.1, theme.colors.primary)
+          : lighten(0.1, theme.colors.secondary)
       };
     }
   }

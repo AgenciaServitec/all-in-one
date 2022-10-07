@@ -1,6 +1,6 @@
 import React from "react";
 import styled from "styled-components";
-import { LogoServitec, SvgEmail, SvgLocation, SvgPhone } from "../../images";
+import { LogoServitec, SvgEmail, SvgLocation, SvgPhone } from "../../../images";
 import {
   faFacebook,
   faWhatsapp,
@@ -8,9 +8,9 @@ import {
 } from "@fortawesome/free-brands-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faEnvelope, faHeart } from "@fortawesome/free-solid-svg-icons";
-import { mediaQuery } from "../../styles/constants/mediaQuery";
+import { mediaQuery } from "../../../styles/constants/mediaQuery";
 import { WrapperComponent } from "../ui";
-import { contactData } from "../../firebase";
+import { contactData } from "../../../firebase";
 import { capitalize } from "lodash";
 
 export const Footer = ({ onEventGaClickIcon, onEventGaClickLink }) => (
@@ -22,11 +22,11 @@ export const Footer = ({ onEventGaClickIcon, onEventGaClickLink }) => (
             <img src={LogoServitec} alt="Logo publicidad google" />
           </div>
           <div className="item-text">
-            <span>CONTÁCTANOS</span>
-            <h2 className="content-contact">
+            <h3>CONTÁCTANOS</h3>
+            <h4 className="content-contact">
               ¡CONTÁCTENOS Y OBTEN NUESTROS SERVICIOS EN LOS MEJORES PRECIOS!
-            </h2>
-            <h2 className="content-somos">¡SOMOS SERVITEC!</h2>
+            </h4>
+            <span className="content-somos">¡SOMOS SERVITEC!</span>
           </div>
         </div>
         <div className="items-socials">
@@ -194,8 +194,7 @@ const Container = styled.footer`
   width: 100%;
   height: auto;
   padding: 4rem 0 0 0;
-  background: #1a1a1a;
-  color: #fff;
+  background: ${({ theme }) => theme.colors.secondary};
   .item-logo-footer {
     margin: auto;
     .item-logo {
@@ -215,38 +214,18 @@ const Container = styled.footer`
       position: relative;
       text-align: center;
       width: 100%;
-      //h1 {
-      //  font-size: 2.5rem;
-      //  font-weight: 600;
-      //  margin: 1rem;
-      //  color: #fff;
-      //}
-      //div {
-      //  width: 60%;
-      //  margin: 0 auto;
-      //  span {
-      //    font-size: 0.8rem;
-      //  }
-      //}
       span {
-        color: #363636;
         font-size: 147px;
         left: 0;
         line-height: 102px;
-        //position: absolute;
         text-align: center;
-        //top: 0;
-        //transition: all 0.4s ease 0s;
         width: 100%;
       }
       .content-contact {
         margin-top: -1.5rem;
         font-family: "Intro Demo", sans-serif;
         font-size: 26px;
-        color: #fff;
         letter-spacing: 0.3px;
-        //margin: 0;
-        //position: relative;
         text-align: center;
         width: 100%;
       }
@@ -254,10 +233,7 @@ const Container = styled.footer`
         margin-top: -0.5rem;
         font-family: "Intro Demo", sans-serif;
         font-size: 26px;
-        color: #fff;
         letter-spacing: 0.3px;
-        //margin: 0;
-        //position: relative;
         text-align: center;
         width: 100%;
       }
@@ -276,9 +252,7 @@ const Container = styled.footer`
       &:after {
         content: "";
         width: 80%;
-        //max-width: 30rem;
         height: 1px;
-        background: #fff;
         bottom: 0;
         text-align: center;
         position: absolute;
@@ -287,7 +261,7 @@ const Container = styled.footer`
       li {
         margin-bottom: 1.7rem;
         a {
-          color: #fff;
+          color: ${({ theme }) => theme.colors.white};
           padding: 0 1rem;
           font-size: 2.5rem;
           padding: 0 1rem;
@@ -339,14 +313,15 @@ const Container = styled.footer`
   .bottom-footer {
     width: 100%;
     padding: 1.5rem;
-    background: #1a1a1a;
+    background: ${({ theme }) => theme.colors.tertiary};
+    color: ${({ theme }) => theme.colors.font1};
     div {
       width: 100%;
       text-align: center;
       font-size: 0.8rem;
       a {
         font-weight: 500;
-        color: #fff100;
+        color: ${({ theme }) => theme.colors.primary};
       }
     }
   }

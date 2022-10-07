@@ -2,27 +2,19 @@ import React from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faWhatsapp } from "@fortawesome/free-brands-svg-icons";
 import styled, { css } from "styled-components";
-import { mediaQuery } from "../../styles/constants/mediaQuery";
+import { mediaQuery } from "../../../styles/constants/mediaQuery";
 
-export const ButtonsFloating = ({ onEventGaClickButton }) => (
+export const ButtonsFloating = () => (
   <Container>
     <a
-      href={`https://api.whatsapp.com/send/?phone=+51941801827&text=Estoy+interesado+en+su+producto+%2F+servicio&app_absent=0`}
+      href={`https://api.whatsapp.com/send?phone=929054672`}
       target="_blank"
       rel="noreferrer"
     >
-      <WrapperButton
-        bg="#5cc753"
-        onClick={() =>
-          onEventGaClickButton(
-            "click-boton-wsp-941801827",
-            "Click boton wsp 941 801 827"
-          )
-        }
-      >
+      <WrapperButton bg="#5cc753">
         <div className="item-text">
-          <div>Atención inmediata</div>
-          <div>941 801 827</div>
+          <div>Servicio Whatsapp</div>
+          <div>929054672</div>
         </div>
         <div className="item-icon">
           <FontAwesomeIcon icon={faWhatsapp} className="icon" />
@@ -34,8 +26,8 @@ export const ButtonsFloating = ({ onEventGaClickButton }) => (
 
 const Container = styled.div`
   position: fixed;
-  right: 0;
-  bottom: 15%;
+  left: 0;
+  bottom: 0.8%;
   z-index: 998;
 `;
 
@@ -50,13 +42,12 @@ const WrapperButton = styled.div`
     display: flex;
     align-items: center;
     justify-content: center;
-    border-top-left-radius: 7rem;
-    border-bottom-left-radius: 7rem;
+    border-top-right-radius: 7rem;
+    border-bottom-right-radius: 7rem;
     ${mediaQuery.minTablet} {
       padding: 0.3rem 0.9rem;
     }
     .item-icon {
-      order: 1;
       margin-left: 0.5rem;
       padding: 0.3rem;
       svg {
@@ -68,7 +59,6 @@ const WrapperButton = styled.div`
       }
     }
     .item-text {
-      order: 2;
       font-size: 0.8rem;
       color: #fff;
       div {

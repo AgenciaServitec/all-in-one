@@ -1,12 +1,8 @@
 import React from "react";
 import styled from "styled-components";
-import {AboutUs, Services, Marcas} from "../../components";
-import {FormContact, WrapperComponent} from "../../components/ui";
+import { InitialComponent, AboutUs, Services } from "../../components/public";
 
-export const Home = ({
-  onEventGaClickButton,
-  onEventGaClickVideos,
-}) => {
+export const Home = ({ onEventGaClickButton, onEventGaClickVideos }) => {
   return (
     <>
       <Container>
@@ -14,13 +10,9 @@ export const Home = ({
         {/*  onClickVisibleFormContact={onClickVisibleFormContact}*/}
         {/*  onEventGaClickButton={onEventGaClickButton}*/}
         {/*/>*/}
-          <AboutUs
-              onEventGaClickButton={onEventGaClickButton}
-          />
-          <Marcas onEventGaClickButton={onEventGaClickButton}/>
-          <Services
-              onEventGaClickButton={onEventGaClickButton}
-          />
+        <InitialComponent />
+        <AboutUs />
+        <Services />
         {/*<WrapperComponent>*/}
         {/*  <VideoSection*/}
         {/*    onClickVisibleFormContact={onClickVisibleFormContact}*/}
@@ -30,9 +22,6 @@ export const Home = ({
 
         {/*</WrapperComponent>*/}
       </Container>
-      {/*<FormContact*/}
-      {/*  onEventGaClickButton={onEventGaClickButton}*/}
-      {/*/>*/}
     </>
   );
 };

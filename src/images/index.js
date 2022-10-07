@@ -11,32 +11,30 @@ export { default as ServitecSlider2 } from "./others/servitec-slider1.webp";
 export { default as ServitecSlider3 } from "./others/servitec-slider3.webp";
 export { default as ImgCongratulation } from "./others/congratulation.webp";
 
-
 // ------Img Servitec Factura Facil-------
 export { default as ImgLogoFacturaFacil } from "./others/logo-factura.webp";
-export { default as ImgCarousel1} from "./others/img-carousel-girl.webp";
-export { default as ImgAbout} from "./others/facturacion-electronica-peru-sunat.webp";
-export { default as ImgFacturaService1} from "./others/img-factura1.webp";
-export { default as ImgFacturaService2} from "./others/img-factura2.webp";
-export { default as ImgFacturaService3} from "./others/img-factura3.webp";
-export { default as ImgFacturaService4} from "./others/img-factura4.webp";
+export { default as ImgCarousel1 } from "./others/img-carousel-girl.webp";
+export { default as ImgAbout } from "./others/facturacion-electronica-peru-sunat.webp";
+export { default as ImgFacturaService1 } from "./others/img-factura1.webp";
+export { default as ImgFacturaService2 } from "./others/img-factura2.webp";
+export { default as ImgFacturaService3 } from "./others/img-factura3.webp";
+export { default as ImgFacturaService4 } from "./others/img-factura4.webp";
 export { default as ImgFacturaService5 } from "./others/info-box10.webp";
 
-// ------Img Servitec Marcas ALL IN ONE-------
-export {default as MarcaSony} from './others/sony.webp';
-export {default as MarcaToshiba} from './others/toshiba.webp';
-export {default as MarcaMitsubishi} from './others/mitsubishi.webp';
-export {default as MarcaMac} from './others/logmac-removebg-preview.webp';
-export { default as MarcaLenovo} from './others/lenovo-removebg-preview.webp';
-export { default as MarcaLg} from './others/lg-removebg-preview.webp';
+// ------Img Servitec AboutUs ALL IN ONE-------
+export { default as MarcaSony } from "./others/sony.webp";
+export { default as MarcaToshiba } from "./others/toshiba.webp";
+export { default as MarcaMitsubishi } from "./others/mitsubishi.webp";
+export { default as MarcaMac } from "./others/logmac-removebg-preview.webp";
+export { default as MarcaLenovo } from "./others/lenovo-removebg-preview.webp";
+export { default as MarcaLg } from "./others/lg-removebg-preview.webp";
 // ------Img Servitec Servicios ALL IN ONE-------
-export {default as Services1} from './others/card1.webp';
-export {default as Services2} from './others/card2.webp';
-export {default as Services3} from './others/card3.webp';
-export {default as Services4} from './others/card4.webp';
-export {default as Services5} from './others/card5.webp';
-export {default as Services6} from './others/card6.webp';
-
+export { default as Services1 } from "./others/card1.webp";
+export { default as Services2 } from "./others/card2.webp";
+export { default as Services3 } from "./others/card3.webp";
+export { default as Services4 } from "./others/card4.webp";
+export { default as Services5 } from "./others/card5.webp";
+export { default as Services6 } from "./others/card6.webp";
 
 // -------SVG-------
 export * from "./svg/Phone";

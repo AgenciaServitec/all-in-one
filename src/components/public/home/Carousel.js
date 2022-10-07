@@ -1,21 +1,24 @@
 import React from "react";
 import AntCarousel from "antd/lib/carousel";
-import {ImgCarousel1,} from "../../images";
+import { ImgCarousel1 } from "../../../images";
 import styled from "styled-components";
-import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
-import {faChevronLeft, faChevronRight,} from "@fortawesome/free-solid-svg-icons";
-import {useDevice} from "../../hooks";
-import {mediaQuery} from "../../styles/constants/mediaQuery";
-import {ItemCarousel} from "./ItemCarousel";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import {
+  faChevronLeft,
+  faChevronRight,
+} from "@fortawesome/free-solid-svg-icons";
+import { useDevice } from "../../../hooks";
+import { mediaQuery } from "../../../styles/constants/mediaQuery";
+import { ItemCarousel } from "./ItemCarousel";
 
 const carouselItems = [
   {
     title: "Mejora la Administración de tu empresa",
-    description: "Servitec te ayudara a controlar tu inventario y analizar lo que vendes minuto a minuto.",
+    description:
+      "Servitec te ayudara a controlar tu inventario y analizar lo que vendes minuto a minuto.",
     image: ImgCarousel1,
     bgColor: "#fff",
   },
-
 ];
 
 export const Carousel = ({
@@ -40,8 +43,6 @@ export const Carousel = ({
             description={carouselItem.description}
             image={carouselItem.image}
             bgColor={carouselItem.bgColor}
-            onClickVisibleFormContact={onClickVisibleFormContact}
-            onEventGaClickButton={onEventGaClickButton}
           />
         ))}
       </AntCarousel>
@@ -52,7 +53,7 @@ export const Carousel = ({
 const Container = styled.div`
   width: 100%;
   height: auto;
-  
+
   ${mediaQuery.minDesktop} {
     .ant-carousel .slick-prev,
     .ant-carousel .slick-next {
