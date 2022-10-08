@@ -73,6 +73,7 @@ export const VersionContainer = styled.section`
   width: 100vw;
   height: 100vh;
   flex-direction: column;
+  background: ${({ theme }) => theme.colors.secondary};
   div {
     h1 {
       font-size: 3em;
