@@ -29,6 +29,8 @@ const Container = styled.section`
   height: auto;
   background: url(${({ bgImage }) => bgImage}) no-repeat scroll 0 0 / 100% 100%
     rgba(0, 0, 0, 0);
+  background-position: center center;
+  background-size: cover;
 
   ${mediaQuery.minTablet} {
     padding: 3rem 0;
@@ -37,7 +39,7 @@ const Container = styled.section`
   .content-items {
     display: grid;
     grid-template-columns: 1fr;
-    padding: 3rem 3.5rem;
+    padding: 3rem;
 
     ${mediaQuery.minTablet} {
       grid-template-columns: 1fr 30rem;
@@ -47,7 +49,6 @@ const Container = styled.section`
       align-self: center;
       padding-left: 2rem;
       .heading {
-        padding-left: 2rem;
         .title {
           color: ${({ theme }) => theme.colors.font1};
           font-weight: 800;
@@ -60,8 +61,11 @@ const Container = styled.section`
           color: ${({ theme }) => theme.colors.primary};
           max-width: 40rem;
           font-weight: 500;
-          font-size: 5.4rem;
+          font-size: 4rem;
           font-family: "Intro Demo", sans-serif;
+          ${mediaQuery.minTablet} {
+            font-size: 5.4rem;
+          }
         }
       }
 
@@ -86,7 +90,6 @@ const Container = styled.section`
     .content-img {
       margin-top: 1rem;
       text-align: center;
-      padding: 0 2rem;
       .wrapper-form {
         background: ${({ theme }) => theme.colors.secondary};
         border-radius: 10px;
