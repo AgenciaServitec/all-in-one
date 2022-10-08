@@ -7,14 +7,14 @@ import { mediaQuery } from "../../../styles/constants/mediaQuery";
 export const ButtonsFloating = () => (
   <Container>
     <a
-      href={`https://api.whatsapp.com/send?phone=929054672`}
+      href={`https://api.whatsapp.com/send?phone=941801827`}
       target="_blank"
       rel="noreferrer"
     >
       <WrapperButton bg="#5cc753">
         <div className="item-text">
           <div>Servicio Whatsapp</div>
-          <div>929054672</div>
+          <div>941801827</div>
         </div>
         <div className="item-icon">
           <FontAwesomeIcon icon={faWhatsapp} className="icon" />
