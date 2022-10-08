@@ -92,7 +92,6 @@ const Container = styled.div`
   h6 {
     color: ${({ theme }) => theme.colors.font2};
     font-family: "Intro Demo", sans-serif;
-    line-height: 5.5rem;
   }
 
   h1 {

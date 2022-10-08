@@ -39,22 +39,32 @@ const Container = styled.section`
   .content-items {
     display: grid;
     grid-template-columns: 1fr;
-    padding: 3rem;
+    padding: 1rem;
 
     ${mediaQuery.minTablet} {
       grid-template-columns: 1fr 30rem;
+      padding: 3rem;
     }
 
     .content {
       align-self: center;
-      padding-left: 2rem;
+      padding-left: 0;
+      ${mediaQuery.minTablet} {
+        grid-template-columns: 1fr 30rem;
+        padding-left: 2rem;
+      }
+
       .heading {
         .title {
           color: ${({ theme }) => theme.colors.font1};
           font-weight: 800;
           font-family: "Intro Demo", sans-serif;
           font-size: 1.2rem;
-          padding-bottom: 1.2rem;
+          padding-top: 1.2rem;
+          ${mediaQuery.minTablet} {
+            grid-template-columns: 1fr 30rem;
+            padding-bottom: 1.2rem;
+          }
         }
 
         .description {
@@ -63,6 +73,7 @@ const Container = styled.section`
           font-weight: 500;
           font-size: 4rem;
           font-family: "Intro Demo", sans-serif;
+          line-height: 4rem;
           ${mediaQuery.minTablet} {
             font-size: 5.4rem;
           }
