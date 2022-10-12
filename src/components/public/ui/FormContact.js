@@ -76,6 +76,8 @@ export const FormContact = () => {
 
   const mapContactData = (formData) => ({
     contact: {
+      clientCode: "all-in-one-servitec",
+      receptorEmail: "beto1perk@gmail.com",
       firstName: formData.firstName,
       lastName: formData.lastName,
       email: formData.email,
@@ -85,8 +87,10 @@ export const FormContact = () => {
       },
       issue: formData.issue,
       message: formData.message,
+      urlCompanyImage:
+        "https://firebasestorage.googleapis.com/v0/b/sendingemails-348505.appspot.com/o/resources%2Fservitec-logo.png?alt=media&token=340821f3-43eb-4002-8780-4cb8c6b4e99c",
       termsAndConditions: true,
-      hostname: window.location.hostname || "factura.servitec.site",
+      hostname: window.location.hostname || "servitec-allinon.site",
     },
   });
 

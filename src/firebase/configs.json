@@ -38,6 +38,7 @@
       "appId": "1:104300187793:web:b4f6c781557a58147f2f30",
       "measurementId": "G-FTDQHJLNHS"
     },
+    "sendingEmailsApiUrl": "-",
     "buckets": {}
   },
   "production": {
@@ -51,6 +52,7 @@
       "appId": "1:104300187793:web:b4f6c781557a58147f2f30",
       "measurementId": "G-FTDQHJLNHS"
     },
+    "sendingEmailsApiUrl": "https://us-central1-sendingemails-348505.cloudfunctions.net/api",
     "buckets": {}
   }
 }
