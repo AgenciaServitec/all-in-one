@@ -185,7 +185,7 @@ export const AuthenticationProvider = ({ children }) => {
     return auth.signOut();
   };
 
-  if (authenticating) return spinLoaderFixed();
+  // if (authenticating) return spinLoaderFixed();
 
   return (
     <AuthenticationContext.Provider

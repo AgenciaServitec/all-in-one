@@ -5,7 +5,8 @@ import {
   MarcaLg,
   MarcaMac,
   MarcaSony,
-  MarcaToshiba,
+  MarcaHp,
+  MarcaDell,
 } from "../../../images";
 
 export const AboutUs = () => {
@@ -23,7 +24,14 @@ export const AboutUs = () => {
           <div className="item-marca">
             <li>
               <a>
-                <img src={MarcaToshiba} />
+                <img src={MarcaHp} />
+              </a>
+            </li>
+          </div>
+          <div className="item-marca">
+            <li>
+              <a>
+                <img src={MarcaDell} />
               </a>
             </li>
           </div>
@@ -52,15 +60,15 @@ export const AboutUs = () => {
       </div>
       <div className="wrapper-text">
         <div className="content-text">
-          <h2 className="title">¿QUIÉNES SOMOS?</h2>
+          <h2 className="title">¿QUE ES UNA ALL IN ONE?</h2>
           <p className="content">
-            Somos una empresa que brinda servicios informáticos de forma
-            integral en la asesoría y consultoría en hardware y software, tanto
-            para usuarios domésticos, negocios y empresas corporativas.
-            Prestamos nuestros servicios en forma altamente personalizada,
-            comprendiendo que cada empresa es única, creando una solución a la
-            medida de tus necesidades. Logrando identificar y entender las
-            necesidades de nuestros clientes para ofrecerle la mejor solución.
+            Las computadoras All in One o todos en Uso son aquellos que tienen
+            integrados todos los componentes base para su funcionamiento, como y
+            fundamentalmente la pantalla, procesador memoria, discos, etc, en
+            una sola carcasa que se integra también con la pantalla y esta es la
+            principal diferencia con respecto a las computadoras de sobremesa.
+            Requiriendo su cuidado para repotenciar el equipo pudiendo dañar la
+            pantalla si no es un tco.especialista.
           </p>
         </div>
       </div>
@@ -75,7 +83,7 @@ const Container = styled.section`
   text-align: center;
   .wrapper-marcas {
     margin: 0px auto;
-    padding: 0 3rem;
+    padding: 1rem 3rem;
     .list-marcas {
       display: flex;
       align-items: center;
@@ -84,7 +92,7 @@ const Container = styled.section`
         width: 288px;
         margin-right: 50px;
         img {
-          width: 10rem;
+          width: 9rem;
         }
       }
     }

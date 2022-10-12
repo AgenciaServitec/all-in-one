@@ -64,7 +64,7 @@ export const FormContact = () => {
   };
 
   const fetchSendEmail = async (contact) =>
-    await fetch(`${currentConfig.sendingEmailsApiUrl}/-/contact`, {
+    await fetch(`${currentConfig.sendingEmailsApiUrl}/generic/contact`, {
       method: "POST",
       headers: {
         "Access-Control-Allow-Origin": null,

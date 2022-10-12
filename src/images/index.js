@@ -23,7 +23,8 @@ export { default as ImgFacturaService5 } from "./others/info-box10.webp";
 
 // ------Img Servitec AboutUs ALL IN ONE-------
 export { default as MarcaSony } from "./others/sony.webp";
-export { default as MarcaToshiba } from "./others/toshiba.webp";
+export { default as MarcaHp } from "./others/hp.webp";
+export { default as MarcaDell } from "./others/dell.webp";
 export { default as MarcaMitsubishi } from "./others/mitsubishi.webp";
 export { default as MarcaMac } from "./others/logmac-removebg-preview.webp";
 export { default as MarcaLenovo } from "./others/lenovo-removebg-preview.webp";
