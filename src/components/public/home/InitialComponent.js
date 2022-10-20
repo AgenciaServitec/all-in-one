@@ -12,6 +12,8 @@ export const InitialComponent = () => {
           <div className="heading">
             <h3 className="title">REPARACION Y VENTA DE</h3>
             <h2 className="description">ALL IN ONE</h2>
+            <h3>¿IMAGEN CON PUNTOS? ¿SE APAGA O SE REINICIA SOLO?</h3>
+            <h3>¡Tenemos la solución!</h3>
           </div>
         </div>
         <div className="content-img">
@@ -42,7 +44,7 @@ const Container = styled.section`
     padding: 1rem;
 
     ${mediaQuery.minTablet} {
-      grid-template-columns: 1fr 30rem;
+      grid-template-columns: 1fr 1fr;
       padding: 3rem;
     }
 
@@ -78,6 +80,12 @@ const Container = styled.section`
             font-size: 5.4rem;
           }
         }
+        h3 {
+          font-size: 1.5em;
+          ${mediaQuery.minTablet} {
+            font-size: 1.7em;
+          }
+        }
       }
 
       .list-about {
@@ -102,6 +110,8 @@ const Container = styled.section`
       margin-top: 1rem;
       text-align: center;
       .wrapper-form {
+        width: 100%;
+        max-width: 30em;
         background: ${({ theme }) => theme.colors.secondary};
         border-radius: 10px;
         padding: 1.5rem 2rem;
