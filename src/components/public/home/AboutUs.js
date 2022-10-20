@@ -78,8 +78,8 @@ export const AboutUs = () => {
           autoplay
           autoplaySpeed={5 * 1000}
           arrows={!isMobile}
-          prevArrow={<FontAwesomeIcon icon={faChevronLeft} color="#fff" />}
-          nextArrow={<FontAwesomeIcon icon={faChevronRight} colo0="#fff" />}
+          prevArrow={<FontAwesomeIcon icon={faChevronLeft} />}
+          nextArrow={<FontAwesomeIcon icon={faChevronRight} />}
         >
           {logoLists.map((logoList, index) => (
             <div className="wrapper-logo-mobile" key={index}>
