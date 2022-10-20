@@ -153,6 +153,7 @@ const Container = styled.div`
 
     .menu-list {
       display: flex;
+      padding: .2em 2em;
 
       .logo-img {
         width: 40%;
@@ -160,12 +161,11 @@ const Container = styled.div`
         display: flex;
         align-items: center;
         justify-content: flex-start;
-
         img {
           width: 14rem;
         }
       }
-
+      
       .list {
         width: 60%;
         display: flex;
@@ -189,7 +189,7 @@ const Container = styled.div`
             cursor: pointer;
           }
           li:hover {
-            color: black;
+            color: #ccc;
             border-bottom: 2px solid #fff100;
             transition: all 0.3s ease-in-out;
           }
@@ -199,7 +199,7 @@ const Container = styled.div`
 
     .menu-mobile {
       width: 100%;
-      color: #000;
+      color: ${({theme}) => theme.colors.white};
       display: grid;
       grid-template-columns: 85% 1fr;
       .item-logo {

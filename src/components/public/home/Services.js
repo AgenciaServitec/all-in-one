@@ -82,7 +82,10 @@ const Container = styled.div`
   z-index: 9;
 
   .content-items {
-    padding: 3rem 0;
+    padding: 1em 0;
+    ${mediaQuery.minTablet} {
+      padding: 3em 0;
+    }
     .heading {
       margin-bottom: 60px;
       padding-top: 79px;
