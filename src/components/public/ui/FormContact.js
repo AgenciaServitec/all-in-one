@@ -28,7 +28,6 @@ export const FormContact = () => {
     email: yup.string().email().required(),
     countryCode: yup.string().required(),
     phoneNumber: yup.number().required(),
-    issue: yup.string().required(),
     message: yup.string(),
   });
 
@@ -76,8 +75,6 @@ export const FormContact = () => {
 
   const mapContactData = (formData) => ({
     contact: {
-      clientCode: "all-in-one-servitec",
-      receptorEmail: "beto1perk@gmail.com",
       firstName: formData.firstName,
       lastName: formData.lastName,
       email: formData.email,
@@ -85,11 +82,7 @@ export const FormContact = () => {
         number: formData.phoneNumber,
         countryCode: formData.countryCode,
       },
-      issue: formData.issue,
       message: formData.message,
-      urlCompanyImage:
-        "https://firebasestorage.googleapis.com/v0/b/sendingemails-348505.appspot.com/o/resources%2Fservitec-logo.png?alt=media&token=340821f3-43eb-4002-8780-4cb8c6b4e99c",
-      termsAndConditions: true,
       hostname: window.location.hostname || "servitec-allinon.site",
     },
   });
@@ -178,23 +171,6 @@ export const FormContact = () => {
             render={({ field: { onChange, value, name } }) => (
               <InputNumber
                 label="Ingrese teléfono"
-                name={name}
-                value={value}
-                onChange={onChange}
-                error={error(name)}
-                required={required(name)}
-              />
-            )}
-          />
-        </Col>
-        <Col span={24}>
-          <Controller
-            name="issue"
-            control={control}
-            defaultValue=""
-            render={({ field: { onChange, value, name } }) => (
-              <Input
-                label="Ingrese asunto"
                 name={name}
                 value={value}
                 onChange={onChange}
