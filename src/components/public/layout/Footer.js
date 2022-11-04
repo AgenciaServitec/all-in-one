@@ -24,7 +24,7 @@ export const Footer = ({ onEventGaClickIcon, onEventGaClickLink }) => (
           <div className="item-text">
             <h3>CONTÁCTANOS</h3>
             <h4 className="content-contact">
-              ¡CONTÁCTENOS Y OBTEN NUESTROS SERVICIOS EN LOS MEJORES PRECIOS!
+              ¡SOLUCIÓN A UN CLICK DE DISTANCIA!
             </h4>
             <span className="content-somos">¡SOMOS SERVITEC!</span>
           </div>
@@ -162,7 +162,7 @@ export const Footer = ({ onEventGaClickIcon, onEventGaClickLink }) => (
               >
                 Chorrillos, Perú
               </a>
-              <p>Pastor Davila 117</p>
+              <p>Jr.Justor Pastor Davila 117</p>
             </div>
           </div>
         </div>

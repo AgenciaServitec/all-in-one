@@ -10,9 +10,8 @@ export const InitialComponent = () => {
       <div className="content-items">
         <div className="content">
           <div className="heading">
-            <h3 className="title">REPARACION Y VENTA DE</h3>
             <h2 className="description">ALL IN ONE</h2>
-            <h3>¿IMAGEN CON PUNTOS? ¿SE APAGA O SE REINICIA SOLO?</h3>
+            <h3>MANTENIMIENTO Y REPARACIÓN</h3>
             <h3>¡Tenemos la solución!</h3>
           </div>
         </div>
