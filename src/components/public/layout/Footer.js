@@ -7,7 +7,11 @@ import {
   faYoutube,
 } from "@fortawesome/free-brands-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faEnvelope, faHeart } from "@fortawesome/free-solid-svg-icons";
+import {
+  faEnvelope,
+  faHeart,
+  faLocationDot,
+} from "@fortawesome/free-solid-svg-icons";
 import { mediaQuery } from "../../../styles/constants/mediaQuery";
 import { WrapperComponent } from "../ui";
 import { contactData } from "../../../firebase";
@@ -24,13 +28,29 @@ export const Footer = ({ onEventGaClickIcon, onEventGaClickLink }) => (
           <div className="item-text">
             <h3>CONTÁCTANOS</h3>
             <h4 className="content-contact">
-              ¡CONTÁCTENOS Y OBTEN NUESTROS SERVICIOS EN LOS MEJORES PRECIOS!
+              Solución a un click de distancia
             </h4>
             <span className="content-somos">¡SOMOS SERVITEC!</span>
           </div>
         </div>
         <div className="items-socials">
           <ul>
+            <li
+              onClick={() =>
+                onEventGaClickIcon(
+                  "click-icon-wsp-941801827",
+                  "Click icon wsp 941 801 827"
+                )
+              }
+            >
+              <a
+                href="https://goo.gl/maps/EiSoB4t5tQ3rG5YU6"
+                target="_blank"
+                rel="noreferrer"
+              >
+                <FontAwesomeIcon icon={faLocationDot} />
+              </a>
+            </li>
             <li
               onClick={() =>
                 onEventGaClickIcon(
@@ -160,7 +180,7 @@ export const Footer = ({ onEventGaClickIcon, onEventGaClickLink }) => (
                 target="_blank"
                 rel="noreferrer"
               >
-                Chorrillos, Perú
+                Jr. Justo pastor Dávila 117 chorrillos
               </a>
               <p>Pastor Davila 117</p>
             </div>

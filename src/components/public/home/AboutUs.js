@@ -48,31 +48,6 @@ export const AboutUs = () => {
   const { isMobile } = useDevice();
   return (
     <Container id="about-us">
-      {/* <ul className="list-marcas">
-          <li className="item-marca">
-            <img src={MarcaSony} alt="imagen-marca" />
-          </li>
-
-          <li className="item-marca">
-            <img src={MarcaHp} alt="imagen-marca" />
-          </li>
-
-          <li className="item-marca">
-            <img src={MarcaDell} alt="imagen-marca" />
-          </li>
-
-          <li className="item-marca">
-            <img src={MarcaLg} alt="imagen-marca" />
-          </li>
-
-          <li className="item-marca">
-            <img src={MarcaMac} alt="imagen-marca" />
-          </li>
-
-          <li className="item-marca">
-            <img src={MarcaLenovo} alt="imagen-marca" />
-          </li>
-        </ul>*/}
       <div className="wrapper-logos-mobile">
         <AntCarousel
           autoplay
