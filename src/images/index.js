@@ -41,3 +41,6 @@ export { default as Services6 } from "./others/card6.webp";
 export * from "./svg/Phone";
 export * from "./svg/Email";
 export * from "./svg/Location";
+
+// -------Multimedia------
+export { default as videoAllinOne } from "./multimedia/video1.mp4";

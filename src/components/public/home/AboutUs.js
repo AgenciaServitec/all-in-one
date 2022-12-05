@@ -7,6 +7,7 @@ import {
   MarcaSony,
   MarcaHp,
   MarcaDell,
+  videoAllinOne,
 } from "../../../images";
 import { mediaQuery } from "../../../styles/constants/mediaQuery";
 import AntCarousel from "antd/lib/carousel";
@@ -51,7 +52,7 @@ export const AboutUs = () => {
       <div className="wrapper-logos-mobile">
         <AntCarousel
           autoplay
-          autoplaySpeed={5 * 1000}
+          autoplaySpeed={3 * 1000}
           arrows={!isMobile}
           prevArrow={<FontAwesomeIcon icon={faChevronLeft} />}
           nextArrow={<FontAwesomeIcon icon={faChevronRight} />}
@@ -75,6 +76,9 @@ export const AboutUs = () => {
             Requiriendo su cuidado para repotenciar el equipo pudiendo dañar la
             pantalla si no es un tco.especialista.
           </p>
+        </div>
+        <div style={{ paddingBottom: "3rem" }}>
+          <VideoBg autoPlay loop muted src={videoAllinOne} type="Video/mp4" />
         </div>
       </div>
     </Container>
@@ -103,9 +107,9 @@ const Container = styled.section`
     .content-text {
       text-align: center;
       width: 100%;
-      padding: 4em 2em;
+      padding: 4em 2em 0 2em;
       ${mediaQuery.minTablet} {
-        padding: 5rem 5rem;
+        padding: 5rem 5rem 2rem 5rem;
       }
       .title {
         letter-spacing: 0.3px;
@@ -119,4 +123,10 @@ const Container = styled.section`
       }
     }
   }
+`;
+
+const VideoBg = styled.video`
+  width: 60%;
+  height: 60%;
+  background: #232a34;
 `;

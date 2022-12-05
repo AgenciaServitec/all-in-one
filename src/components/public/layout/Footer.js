@@ -195,10 +195,7 @@ export const Footer = ({ onEventGaClickIcon, onEventGaClickLink }) => (
               target="_blank"
               rel="noreferrer"
               onClick={() =>
-                onEventGaClickLink(
-                  "click-link-agencia-servitec",
-                  "Click link AgenciaServitec"
-                )
+                onEventGaClickLink("click-link-servitec", "Click link servitec")
               }
             >
               {contactData.poweredBy.name}
