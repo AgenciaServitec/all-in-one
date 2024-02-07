@@ -1,69 +1,11 @@
 import React from "react";
 import styled from "styled-components";
-import {
-  MarcaLenovo,
-  MarcaLg,
-  MarcaMac,
-  MarcaSony,
-  MarcaHp,
-  MarcaDell,
-  videoAllinOne,
-} from "../../../images";
+import { videoAllinOne } from "../../../images";
 import { mediaQuery } from "../../../styles/constants/mediaQuery";
-import AntCarousel from "antd/lib/carousel";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import {
-  faChevronLeft,
-  faChevronRight,
-} from "@fortawesome/free-solid-svg-icons";
-import { useDevice } from "../../../hooks";
-
-const logoLists = [
-  {
-    image: MarcaLenovo,
-    name: "Lenovo",
-  },
-  {
-    image: MarcaLg,
-    name: "Lg",
-  },
-  {
-    image: MarcaMac,
-    name: "Mac",
-  },
-  {
-    image: MarcaSony,
-    name: "Sonny",
-  },
-  {
-    image: MarcaHp,
-    name: "hp",
-  },
-  {
-    image: MarcaDell,
-    name: "Dell",
-  },
-];
 
 export const AboutUs = () => {
-  const { isMobile } = useDevice();
   return (
     <Container id="about-us">
-      <div className="wrapper-logos-mobile">
-        <AntCarousel
-          autoplay
-          autoplaySpeed={3 * 1000}
-          arrows={!isMobile}
-          prevArrow={<FontAwesomeIcon icon={faChevronLeft} />}
-          nextArrow={<FontAwesomeIcon icon={faChevronRight} />}
-        >
-          {logoLists.map((logoList, index) => (
-            <div className="wrapper-logo-mobile" key={index}>
-              <img src={logoList.image} alt={logoList.name} />
-            </div>
-          ))}
-        </AntCarousel>
-      </div>
       <div className="wrapper-text">
         <div className="content-text">
           <h2 className="title">¿QUE ES UNA ALL IN ONE?</h2>
@@ -88,20 +30,8 @@ export const AboutUs = () => {
 const Container = styled.section`
   width: 100%;
   height: auto;
-  background: ${({ theme }) => theme.colors.secondary};
+  background: ${({ theme }) => theme.colors.primary};
   text-align: center;
-  .wrapper-logos-mobile {
-    padding: 1.5rem 2rem;
-    .wrapper-logo-mobile {
-      max-width: 13em;
-      width: 100%;
-      padding: 2em 0 3.5em 0;
-
-      img {
-        width: 100%;
-      }
-    }
-  }
   .wrapper-text {
     background: none repeat scroll 0 0 #1a1a1a;
     .content-text {

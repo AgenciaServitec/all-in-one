@@ -78,11 +78,12 @@ export const BaseLayout = ({ children }) => {
 };
 
 const Container = styled.div`
-  width: 100vw;
+  width: 100%;
   min-height: 100vh;
   height: auto;
   position: relative;
   padding-top: 5rem;
+  background-color: red;
 
   h1,
   h2,
@@ -136,25 +137,21 @@ const Container = styled.div`
   }
 
   .header {
+    width: 100%;
     position: fixed;
     z-index: 100;
-    width: 100%;
     //max-width: 1250px;
     height: auto;
     background: ${({ theme }) => theme.colors.secondary};
     margin: auto;
     padding: 1rem;
-    display: grid;
-    grid-area: auto;
     box-shadow: 0 6px 8px 0 rgb(12 0 46 / 6%);
-    right: 0;
     left: 0;
     top: 0;
 
     .menu-list {
       display: flex;
       padding: .2em 2em;
-
       .logo-img {
         width: 40%;
         list-style: none;
@@ -200,12 +197,13 @@ const Container = styled.div`
     .menu-mobile {
       width: 100%;
       color: ${({theme}) => theme.colors.white};
-      display: grid;
-      grid-template-columns: 85% 1fr;
+      display: flex;
+      justify-content: space-between;
+      padding: 1rem;
       .item-logo {
         display: flex;
         align-items: center;
-        justify-content: start;
+        justify-content: flex-start;
         img {
           width: 65%;
           max-width: 220px;
@@ -214,8 +212,6 @@ const Container = styled.div`
 
       .icon-bar {
         width: auto;
-        height: 100%;
-        padding: 0.7rem 0.1rem 0.7rem 1.7rem;
       }
     }
   }
