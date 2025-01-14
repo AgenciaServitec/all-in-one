@@ -1,0 +1,26 @@
+---
+import Container from "../shared/Container.astro";
+import Title from "../shared/Title.astro";
+import { brands } from "../../datalist";
+---
+
+<section>
+  <Container className="space-y-8">
+    <div class="text-center max-w-3xl mx-auto">
+      <Title> Trabajamos con múltiples marcas </Title>
+    </div>
+    <div class="flex justify-center flex-wrap gap-4">
+      {
+        brands.map((brand) => (
+          <div class={`${brand.style} w-40 h-20 sm:w-60`}>
+            <img
+              class={`${brand.imgStyle} object-contain w-full h-10 `}
+              src={`${brand.imageUrl}`}
+              alt={`${brand.title}`}
+            />
+          </div>
+        ))
+      }
+    </div>
+  </Container>
+</section>

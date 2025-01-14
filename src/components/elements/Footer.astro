@@ -1,0 +1,156 @@
+---
+import GroupFooterNav from "../blocks/GroupFooterNav.astro";
+import Container from "../shared/Container.astro";
+import FooterNav from "../shared/FooterNav.astro";
+import Paragraph from "../shared/Paragraph.astro";
+const footerNav1 = [
+  {
+    itemText: "Marketing",
+    itemLink: "#",
+  },
+  {
+    itemText: "Analylitics",
+    itemLink: "#",
+  },
+  {
+    itemText: "Commerce",
+    itemLink: "#",
+  },
+  {
+    itemText: "Insights",
+    itemLink: "#",
+  },
+];
+
+const footerSupport = [
+  {
+    itemText: "Pricing",
+    itemLink: "#",
+  },
+  {
+    itemText: "Guides",
+    itemLink: "#",
+  },
+  {
+    itemText: "FAQ",
+    itemLink: "#",
+  },
+  {
+    itemText: "Contact",
+    itemLink: "#",
+  },
+];
+
+const footerCompany = [
+  {
+    itemText: "About",
+    itemLink: "/about",
+  },
+  {
+    itemText: "Blog",
+    itemLink: "#",
+  },
+  {
+    itemText: "Jobs",
+    itemLink: "#",
+  },
+  {
+    itemText: "Parteners",
+    itemLink: "#",
+  },
+  {
+    itemText: "Jobs",
+    itemLink: "#",
+  },
+];
+const footerLegal = [
+  {
+    itemText: "Claim",
+    itemLink: "/#",
+  },
+  {
+    itemText: "Privacy",
+    itemLink: "#",
+  },
+  {
+    itemText: "Terms",
+    itemLink: "#",
+  },
+];
+---
+
+<div class="mt-10"></div>
+<footer
+  class="relative bg-gradient-to-tr from-gray-100 to-gray-200 dark:from-gray-900 pt-16 rounded-t-3xl grid place-items-center"
+>
+  <div class="absolute right-0 top-0 h-full w-full flex justify-end">
+    <div class="w-28 h-28 overflow-auto flex rounded-xl relative blur-2xl">
+      <span
+        class="absolute w-16 h-16 -top-1 -right-1 bg-yellow-500 rounded-md rotate-45"
+      ></span>
+      <span
+        class="absolute w-16 h-16 -bottom-1 -right-1 bg-[#FCDC58] rounded-md rotate-45"
+      ></span>
+      <span
+        class="absolute w-16 h-16 -bottom-1 -left-1 bg-primary rounded-md rotate-45"
+      ></span>
+    </div>
+  </div>
+
+  <div class="absolute left-0 bottom-0 h-full w-full flex items-end">
+    <div class="w-28 h-28 overflow-auto flex rounded-xl relative blur-2xl">
+      <span
+        class="absolute w-16 h-16 -top-1 -right-1 bg-yellow-500 rounded-md rotate-45"
+      ></span>
+      <span
+        class="absolute w-16 h-16 -bottom-1 -right-1 bg-[#FCDC58] rounded-md rotate-45"
+      ></span>
+      <span
+        class="absolute w-16 h-16 -bottom-1 -left-1 bg-primary rounded-md rotate-45"
+      ></span>
+    </div>
+  </div>
+  <Container className="pb-8 relative overflow-auto">
+    <div
+      class="grid grid-cols-1 md:grid-cols-2 place-items-center gap-8 relative my-4 md:my-8"
+    >
+      <div class="col-span-1 w-full flex flex-col items-center">
+          <a href="/" class="max-w-72">
+            <img src="/logos/logoServitec.webp" alt="logoServitec" class="object-contain" >
+          </a>
+      </div>
+      <div class="text-xl flex flex-col md:flex-col items-center md:items-start gap-12 md:gap-4 my-10 md:my-0">
+        <a href="https://wa.me/51941801827" target="_blank" class="flex flex-col md:flex-row  items-center gap-2 cursor-pointer">
+          <i class="fa-brands fa-whatsapp text-heading-1 text-4xl md:text-2xl lg:text-4xl"></i>
+          <span class="text-heading-1">941801827</span>
+        </a>
+        <a href="mailto:contactos@servitec-peru.com" class="flex flex-col md:flex-row  items-center gap-2 cursor-pointer">
+          <i class="fa-regular fa-envelope text-heading-1 text-4xl md:text-2xl lg:text-4xl"></i>
+          <span class="text-heading-1">contactos@servitec-peru.com</span>
+        </a>
+        <a href="https://maps.app.goo.gl/KsD6ycS9gm21B2pdA" class="flex flex-col md:flex-row  items-center gap-2 cursor-pointer">
+          <i class="fa-solid fa-location-dot text-heading-1 text-4xl md:text-2xl lg:text-4xl"></i>
+          <span class="text-heading-1">Calle Vargas 179, Chorrillos</span>
+        </a>
+      </div>
+    </div>
+  </Container>
+  <div class="bg-gradient-to-tl from-box-bg py-2 relative">
+    <Container>
+      <div
+        class="flex justify-between items-center gap-6 md:text-lg text-heading-3"
+      >
+        <div>
+          &copy; <span id="year"></span> Servitec. Todos los derechos reservados
+        </div>
+        <div>
+          Desarrollado por <a
+            href="https://servitec.site"
+            target="_blank"
+            class="font-semibold">Servitec Perú</a
+          >
+        </div>
+      </div>
+    </Container>
+  </div>
+</footer>
