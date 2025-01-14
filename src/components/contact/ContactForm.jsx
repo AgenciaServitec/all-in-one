@@ -83,7 +83,7 @@ const ContactFormComponent = () => {
           type="number"
           name="phoneNumber"
           id="phoneNumber"
-          className="w-full py-3 outline-none bg-transparent"
+          className="w-full py-3 outline-none bg-transparent font-sans"
         />
       </div>
 

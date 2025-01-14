@@ -30,7 +30,7 @@ export const POST = async ({ request }) => {
         number: phoneNumber,
       },
       message,
-      hostname: "estudio-contable-contador.com",
+      hostname: "servitec-allinone.site",
     },
   };
 
